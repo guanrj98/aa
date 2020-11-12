@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="js/jquery.js"></script>
+  <link rel="stylesheet" href="css/zhuce.css">
+  <link rel="shortcut icon" href="img/fhdpc_16px_未蘑菇街.png">
+</head>
+<body>
+  <div class="header">
+    <img src="img/蘑菇街.png" alt="">
+  </div>
+
+
+  <div class="banner">
+      <div class="banner-top"></div>
+  </div>
+
+    <div class="login">
+      <p>密码登录</p>
+      <div class="TMall-login">
+        <input type="text" placeholder="会员名/手机号" autocomplete="off" id="iptText"><br>
+      </div>
+      <div class="TMall-login">
+        <input type="password" placeholder="请输入您的密码" autocomplete="off" id="iptPsd"><br>
+    </div>
+    <button type="button" id="btn1">登录</button>
+    <button type="button" id="btn2">免费注册</button>
+    </div>
+
+
+
+
+
+
+
+    <script>
+      $(function() {
+          // $(".oUl li").mouseenter(function() {
+          //     $(this).addClass("red").siblings().removeClass("red");
+          // }).mouseleave(function() {
+          //     $(this).removeClass("red");
+          // })
+          $("#btn1").click(function() {
+              let username = $("#iptText").val();
+              let password = $("#iptPsd").val();
+              let url = 'http://jx.xuzhixiang.top/ap/api/login.php'
+              $.ajax({
+                  type: "Get",
+                  url,
+                  data: `username=${username}&password=${password}`,
+                  success: function(res) {
+                      console.log(res.data);
+                      if (res.code == 1) {
+                          localStorage.setItem("u-id", res.data.id);
+                          localStorage.setItem("u-token", res.data.token)
+                          alert("登录成功")
+                          location.href = "Shouye.html";
+                      } else {
+                          alert(res.msg)
+                      }
+                  }
+              })
+          })
+          $("#btn2").click(function() {
+              location.href = "zhuce.html";
+          })
+      })
+  </script>
+
+
+
+
+</body>
+</html>

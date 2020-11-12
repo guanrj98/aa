@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="js/jquery.js"></script>
+  <link rel="stylesheet" href="css/zhuce.css">
+  <link rel="shortcut icon" href="img/fhdpc_16px_未蘑菇街.png">
+</head>
+<body>
+  <div class="header">
+    <img src="img/蘑菇街.png" alt="">
+  </div>
+
+
+  <div class="banner">
+      <div class="banner-top"></div>
+  </div>
+
+    <div class="login">
+      <p>注册账号</p>
+      <div class="TMall-login">
+        <input type="text" placeholder="会员名/手机号" autocomplete="off" id="iptTexts"><br>
+      </div>
+      <div class="TMall-login">
+        <input type="password" placeholder="请输入您的密码" autocomplete="off" id="iptPsds"><br>
+    </div>
+    <button type="button" id="btn">注册</button>
+    <a href="denglu.html"> <span>密码登录</span></a>
+    </div>
+
+
+
+    <script>
+
+     $(function() {
+        $("#btn").click(function() {
+          let username = $("#iptTexts").val();
+          let password = $("#iptPsds").val();
+          let url = "http://jx.xuzhixiang.top/ap/api/reg.php";
+          $.ajax({
+            type: "Get",
+            url,
+            data: `username=${username}&password=${password}`,
+            success: function(res) {
+              // console.log(data);
+              if (res.code == 1) {
+                            alert(res.msg);
+                            location.href = "denglu.html";
+                        } else {
+                            alert(res.msg)
+                        }
+                    }
+          })
+        })
+
+    })
+    </script>
+</body>
+</html>

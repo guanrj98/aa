@@ -1,0 +1,131 @@
+
+$(function(){
+  $.ajax({
+    url:"http://jx.xuzhixiang.top/ap/api/productlist.php",
+    type:"get",
+    data:{
+      uid:43870
+    },
+
+    success:function(res) {
+      console.log(res.data);
+      let products =res.data;
+      let html ="";
+      products.forEach(v=>{
+        html +=`
+        <li>
+        <a href="xiangqingye.html?pid=${v.pid}">
+        <img src="${v.pimg}" alt=""></a>
+        <span>${v.pname}</span>
+        <span>￥${v.pdesc}</span>
+        <span>${v.pprice}</span>
+        </li>`
+      })
+    $("#list").html(html);
+    }
+      })
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+// $.post("http://jx.xuzhixiang.top/ap/api/goods/goods-add.php",{
+//     pimg:
+//       "https://s5.mogucdn.com/mlcdn/776a41/201102_68347cjfcegai84b4632bg5f58k22_750x1125.png_440x587.v1cAC.40.webp",
+//     pname: "韩版网红粉色小西装外套女双排扣宽松休闲chic西服春秋季新款",
+//     pdesc: "好好看",
+//     pprice: 79.9,
+//     uid: 43870
+//   },
+//   data=> {
+//     console.log(data);
+//   })
+// $.post(
+//   "http://jx.xuzhixiang.top/ap/api/goods/goods-add.php",
+//   {
+//     pimg:
+//       "https://s5.mogucdn.com/mlcdn/c45406/191023_2358gc47lh5cc96297hd1l0i4ad3h_640x960.jpg_440x587.v1cAC.40.webp",
+//     pname: "秋季新款韩版洋气减龄马甲+打底衫+格子半身裙三件套时尚套装女",
+//     pdesc: "太好看了",
+//     pprice: 138.6,
+//     uid: 43870
+//   },
+//   data => {
+//     console.log(data);
+//   })
+// $.post(
+//   "http://jx.xuzhixiang.top/ap/api/goods/goods-add.php",
+//   {
+//     pimg:
+//       "https://s5.mogucdn.com/mlcdn/776a41/201102_30cifgd1jk8448gg0leej3e2595ij_750x1125.png_440x587.v1cAC.40.webp",
+//     pname: "2019秋新款韩版宽松百搭吊带衫女小背心条纹打底衫上衣",
+//     pdesc: "可真好看",
+//     pprice: 16.8,
+//     uid: 43870
+//   },
+//   data => {
+//     console.log(data);
+//   })
+
+// $.post(
+//   "http://jx.xuzhixiang.top/ap/api/goods/goods-add.php",
+//   {
+//     pimg:
+//       "https://s5.mogucdn.com/mlcdn/776a41/201102_5hhce67a93ef589f383e46421j9h0_750x1125.png_440x587.v1cAC.40.webp",
+//     pname: "赫本风小黑裙春秋连衣裙2020拼接网纱喇叭袖亮片显瘦打底裙子",
+//     pdesc: "可真耐看",
+//     pprice: 80.1,
+//     uid: 43870
+//   },
+//   data => {
+//     console.log(data);
+//   }
+// )
+
+
+
+// $.post(
+//   "http://jx.xuzhixiang.top/ap/api/goods/goods-add.php",
+//   {
+//     pimg:
+//       "https://s5.mogucdn.com/mlcdn/776a41/201102_28fj7a7f2128h627h0ja9a07hc4cg_750x1125.png_440x587.v1cAC.40.webp",
+//     pname: "阔腿牛仔裤女宽松新款高腰显瘦老爹垂感百搭直筒小个子拖地长裤",
+//     pdesc: "可耐看",
+//     pprice: 80.1,
+//     uid: 43870
+//   },
+//   data => {
+//     console.log(data);
+//   }
+// )
+
+
+
+// $.post(
+//   "http://jx.xuzhixiang.top/ap/api/goods/goods-add.php",
+//   {
+//     pimg:
+//       "https://s5.mogucdn.com/mlcdn/776a41/201102_79928f6g324aeefkb3hia9543fa56_750x1125.png_440x587.v1cAC.40.webp",
+//     pname: "加肥加大码女装秋装新款洋气胖妹妹运动休闲裤套装显瘦两件套",
+//     pdesc: "可耐看",
+//     pprice: 80.82,
+//     uid: 43870
+//   },
+//   data => {
+//     console.log(data);
+//   }
+// )
+
+
+
+
+

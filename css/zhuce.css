@@ -1,0 +1,170 @@
+body,
+ul,
+li,
+dl,
+dt,
+dd,
+p,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+img,
+table,
+fieldset,
+legend,
+figure,
+figcaption,
+menu,
+input {
+  margin: 0;
+  padding: 0;
+}
+ul,
+li,
+ol {
+  list-style: none;
+}
+img,
+fieldset {
+  border: 0;
+}
+img {
+  display: block;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+strong {
+  font-weight: 100;
+}
+body {
+  font-family: "微软雅黑";
+}
+input,
+a {
+  outline: none;
+}
+body,
+html {
+  height: 100%;
+}
+.header{
+	height: 120px;
+	/* background: pink; */
+}
+
+.header img{
+	width: 140px;
+	height: 80px;
+	padding-top: 30px;
+	margin-left: 200px;
+}
+
+.login{
+	background: chocolate;
+}
+
+
+.login span{
+	float: left;
+	font-size: 24px;
+	margin: 20px 0 0 110px;
+}
+
+.TMall-login{
+	margin-left: 300px;
+}
+
+
+
+
+
+
+
+
+
+/* ----------------------banner -------------------------*/
+
+.banner{
+	height: 800px;
+	background: url(../img/5.gif)no-repeat;
+}
+
+.banner-top{
+	height:753px;
+	width: 864px;
+	background: #ff6f30;
+	float: right;
+}
+
+.login{
+	width: 360px;
+	height: 420px;
+	background-color: white;
+	position: absolute;
+	top: 240px;
+	left: 70%;
+}
+p{
+	height: 30px;
+	text-align: center;
+	font-size: 20px;
+	margin-top: 30px;
+}
+.TMall-login{
+	width: 300px;
+	height: 40px;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+.TMall-login img{
+	width: 40px;
+	height: 40px;
+	float: left;
+}
+.TMall-login input{
+	width: 256px;
+	height: 36px;
+	outline: none;
+	float: left;
+}
+button{
+	background-color: red;
+	margin-top: 20px;
+}
+#btn{
+	width: 300px;
+	height: 40px;
+	margin-left: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
